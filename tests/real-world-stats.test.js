@@ -79,22 +79,22 @@ const popularPackages = [
 ]
 
 const UILibraries = [
-  {
-    name: 'bootstrap@3.3.7',
-    size: 37.05 * 1024,
-  },
-  {
-    name: 'animate.css@3.5.2',
-    size: 52.79 * 1024,
-  },
+  // {
+  //   name: 'bootstrap@3.3.7',
+  //   size: 37.05 * 1024,
+  // },
+  // {
+  //   name: 'animate.css@3.5.2',
+  //   size: 52.79 * 1024,
+  // },
   {
     name: 'bulma@0.5.1',
     size: 125 * 1024,
   },
-  {
-    name: 'tachyons@4.8.1',
-    size: 80.69 * 1024,
-  },
+  // {
+  //   name: 'tachyons@4.8.1',
+  //   size: 80.69 * 1024,
+  // },
 ]
 
 const libsWithPeerDeps = [
@@ -141,7 +141,7 @@ describe('real world stats', () => {
     await testPackages(popularPackages, done)
   })
 
-  test('Sizes of popular UI Libraries', async done => {
+  test.only('Sizes of popular UI Libraries', async done => {
     await testPackages(UILibraries, done)
   })
 

@@ -211,6 +211,8 @@ const BuildUtils = {
 
     log('build end %s', name)
 
+    console.log(stats, error)
+
     const jsonStatsStartTime = performance.now()
     let jsonStats = stats.toJson({
       assets: true,
@@ -289,8 +291,8 @@ const BuildUtils = {
         if (!matches) {
           throw new UnexpectedBuildError(
             'Found an asset without the `.bundle` suffix. ' +
-              'A loader customization might be needed to recognize this asset type' +
-              asset.name
+            'A loader customization might be needed to recognize this asset type' +
+            asset.name
           )
         }
 

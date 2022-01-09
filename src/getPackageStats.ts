@@ -52,6 +52,7 @@ export default async function getPackageStats(
   packageString: string,
   optionsRaw: GetPackageStatsOptions
 ) {
+  console.log("getPackageStats", { packageString })
   const startTime = performance.now()
   const defaultMinifier: 'terser' = 'terser'
 
